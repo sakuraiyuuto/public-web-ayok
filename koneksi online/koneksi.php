@@ -6,8 +6,8 @@ ini_set('display_errors', 0);
 
 
 $server  = "localhost";
-$username = "ayok";
-$password = "Ayokerja17";
+$username = "root";
+$password = "maman123";
 $database = "ayok";
 
 //koneksi dan memilih database di server 
