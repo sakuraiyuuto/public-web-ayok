@@ -66,7 +66,7 @@
 		<img src="../gambar/logo/ayok.png">
 		<p>ayo <b>kerja !</b></p>
 		<h1>Daftar akun</h1>
-		<form name="form1" action="registrasiproses.php" method="post" onsubmit="return validate()">
+		<form name="form1" action="../sistem/registrasiproses.php" method="post" onsubmit="return validate()">
 			<font> Nama </font>
 			<input type="text" name="nama" id="nama">
 			<font>Email </font>
@@ -79,7 +79,7 @@
 			<input type="password" name="password2" id="password2"><p>
 			<div class="row">
 				<div class="partition1">
-					<a href="../login_akun/login.php">Kembali</a>
+					<a href="login.php">Kembali</a>
 				</div>
 				<div class="partition3"> 
 				</div>

@@ -1,6 +1,6 @@
 <?php
-	include("sistem/cek_session.php");
-	include("sistem/koneksi_database.php");
+	include("../sistem/cek_session.php");
+	include("../sistem/koneksi_database.php");
 ?>
 <html>
 <head>
@@ -10,8 +10,8 @@
 <body>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<div class="topnav" id="myTopnav">
-		<a href="index.php"><b>Home</b></a>
-		<a href="logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
+		<a href="../index.php"><b>Home</b></a>
+		<a href="../sistem/logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
 		<div class="box1">
 			<form name=form1 method=post action="carijasa.php" onsubmit="return validate()">
 				<input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
@@ -63,7 +63,7 @@
 						$hasil3=mysqli_query($konek, $perintah3);
 						while($row3=mysqli_fetch_array($hasil3))
 						{
-							$imageURL='fotojasa/'.$row3[1];
+							$imageURL='../gambar/penyedia_jasa/'.$row3[1];
 						}
 						echo "<a href=\"tampilanjasa.php?data1=$row[2]&data2=$row[3]\">";
 						echo "<div class=\"box8\">";

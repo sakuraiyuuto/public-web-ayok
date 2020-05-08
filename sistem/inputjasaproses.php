@@ -64,4 +64,3 @@
 			echo "daftar jasa gagal";
 		}
 	?>
-</body>

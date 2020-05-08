@@ -92,7 +92,7 @@
 			<input type="password" name="password" placeholder="Password">
 			<input type="submit" name="login" value="Login" style="text-align:center;width:100px;cursor:pointer;border:none;background-color:rgb(220,180,60);color:white;border-radius:30px;margin-top:3%;margin-bottom:3%;">
 		</form>
-		<p> Belum punya akun? <a href="../registrasi_akun/registrasi.php" style="text-align:center"> Daftar sekarang. </a></p>
+		<p> Belum punya akun? <a href="../akun/registrasi.php" style="text-align:center"> Daftar sekarang. </a></p>
 	</div>
 </body>
 </html>

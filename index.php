@@ -16,7 +16,7 @@
 		<a href="akun/profil.php"><b>Profil Saya</b></a>
 		<a href="sistem/logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
 		<div class="box1">
-			<form name=form1 method=post action=carijasa.php onsubmit="return validate()">
+			<form name=form1 method=post action=akun/carijasa.php onsubmit="return validate()">
 				<input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
 				<input type=submit style="width:40px;height:30px;border-radius:10px;border:none;cursor:pointer;border:none;background-color:white;margin-left:1px;" value="Cari">
 			</form>
@@ -78,86 +78,200 @@
 		
 		<div class="block2">
 			<h3><center>Pilihan Kategori Jasa</center></h3>
+			
 			<div class="block7">
-				<a href="jasa/reparasi.php">
+			<!--Reparasi-->
+				<a href="jasa/elektronik.php">
 					<div class="box7">
-						<img src="gambar/kategori_jasa/reparasi.png"><br>		
-						Reparasi
+						<img src="gambar/kategori_jasa/elektronik.png"><br>		
+						Elektronik
 					</div>
 				</a>
-		
-				<a href ="jasa/konstruksi.php">
+				
+				<a href="jasa/bengkel.php">
 					<div class="box7">
-						<img src="gambar/kategori_jasa/konstruksi.png"><br>		 
-						Konstruksi
+						<img src="gambar/kategori_jasa/bengkel.png"><br>		
+						Bengkel
+					</div>
+				</a>
+				
+			<!--konstruksi-->
+				<a href ="jasa/arsitek.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/arsitek.png"><br>		 
+						Arsitek
 					</div>
 				</a>
 			
-				<a href ="jasa/desain.php">
+				<a href ="jasa/tukang.php">
 					<div class="box7">
-						<img src="gambar/kategori_jasa/desain.png"><br>	
-						Desain
+						<img src="gambar/kategori_jasa/tukang.png"><br>	
+						Tukang
 					</div>
 				</a>
 				
-				<a href ="jasa/kesehatan.php">
+			<!--desain-->
+				<a href ="jasa/logoposterbanner.php">
 					<div class="box7">
-						<img src="gambar/kategori_jasa/kesehatan.png"><br>	
-						Kesehatan
+						<img src="gambar/kategori_jasa/logoposterbanner.png"><br>	
+						Logo, Poster dan Banner
 					</div>
 				</a>
-			</div>
-				
-			<div class="block7">
-				<a href ="jasa/rumahtangga.php">
+		
+				<a href ="jasa/pakaian.php">
 					<div class="box7">
-						<img src="gambar/kategori_jasa/rumahtangga.png"><br>	
-						Rumah Tangga
-					</div>
-				</a>
-				
-				<a href ="jasa/penampilan.php">
-					<div class="box7">
-						<img src="gambar/kategori_jasa/penampilan.png"><br>	
-						Penampilan
+						<img src="gambar/kategori_jasa/pakaian.png"><br>	
+						Pakaian
 					</div>
 				</a>
 				
-				<a href ="jasa/kebersihan.php">
+				<a href ="jasa/lukisan.php">
 					<div class="box7">
-						<img src="gambar/kategori_jasa/kebersihan.png"><br>	
-						Kebersihan
+						<img src="gambar/kategori_jasa/lukisan.png"><br>	
+						Lukisan
 					</div>
 				</a>
 				
-				<a href ="jasa/transportasi.php">
+			<!--kesehatan-->
+				<a href ="jasa/dokter.php">
 					<div class="box7">
-						<img src="gambar/kategori_jasa/transportasi.png"><br>	
-						Transportasi
+						<img src="gambar/kategori_jasa/dokter.png"><br>	
+						Dokter
 					</div>
 				</a>
 				
-				<a href ="jasa/layananit.php">
+				<a href ="jasa/pijat.php">
 					<div class="box7">
-						<img src="gambar/kategori_jasa/layananit.png"><br>	
-						Layanan IT
+						<img src="gambar/kategori_jasa/pijat.png"><br>	
+						Pijat
 					</div>
 				</a>
 				
-				<a href ="jasa/pengajar.php">
+				<a href ="jasa/terapi.php">
 					<div class="box7">
-						<img src="gambar/kategori_jasa/pengajar.png"><br>	
-						Pengajar
+						<img src="gambar/kategori_jasa/terapi.png"><br>	
+						Terapi
 					</div>
 				</a>
 				
+			<!--rumah tangga-->
+				<a href ="jasa/asistenrumahtangga.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/asistenrumahtangga.png"><br>	
+						Asisten Rumah Tangga
+					</div>
+				</a>
+				
+				<a href ="jasa/tukangkebun.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/tukangkebun.png"><br>	
+						Tukang Kebun
+					</div>
+				</a>
+				
+				<a href ="jasa/pengasuhbayidananak.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/pengasuhbayidananak.png"><br>	
+						Pengasuh Bayi dan Anak
+					</div>
+				</a>
+				
+				<a href ="jasa/angkutanpindahrumah.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/angkutanpindahrumah.png"><br>	
+						Angkutan Pindah Rumah
+					</div>
+				</a>
+				
+			<!--penampilan-->
+				<a href ="jasa/perawatantubuh.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/perawatantubuh.png"><br>	
+						Perawatan Tubuh
+					</div>
+				</a>
+				
+				<a href ="jasa/salon.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/salon.png"><br>	
+						Salon
+					</div>
+				</a>
+				
+				<a href ="jasa/pangkasrambut.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/pangkasrambut.png"><br>	
+						Pangkas Rambut
+					</div>
+				</a>
+				
+				<a href ="jasa/makeupacara.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/makeupacara.png"><br>	
+						Make Up Acara
+					</div>
+				</a>
+				
+			<!--kebersihan-->	
+				<a href ="jasa/layanankebersihanrumah.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/layanankebersihanrumah.png"><br>	
+						Layanan Kebersihan Rumah
+					</div>
+				</a>
+				
+				<a href ="jasa/cucikendaraan.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/cucikendaraan.png"><br>	
+						Cuci Kendaraan
+					</div>
+				</a>
+				
+			<!--transportasi-->
+				<a href ="jasa/supir.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/supir.png"><br>	
+						Supir
+					</div>
+				</a>
+				
+			<!--Layanan IT-->
+				<a href ="jasa/appsistemweb.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/appsistemweb.png"><br>	
+						App, Sistem dan Web
+					</div>
+				</a>
+				
+				<a href ="jasa/dataoriented.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/dataoriented.png"><br>	
+						Data Oriented
+					</div>
+				</a>
+			
+			<!--Layanan IT-->
+				<a href ="jasa/gurules.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/gurules.png"><br>	
+						Guru Les
+					</div>
+				</a>
+				
+				<a href ="jasa/personaltrainer.php">
+					<div class="box7">
+						<img src="gambar/kategori_jasa/personaltrainer.png"><br>	
+						Personal Trainer
+					</div>
+				</a>
+			<!--Semua Jasa-->
+			
 				<a href ="jasa/semuajasa.php">
 					<div class="box7">
-						<img src="gambar/icon/lainlain.png"><br>	
-						Lain-lain
+						<img src="gambar/kategori_jasa/semuajasa.png"><br>	
+						Lihat Semua Jasa
 					</div>
 				</a>
-				
 			</div>
 		</div>
 	</div>

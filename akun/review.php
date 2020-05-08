@@ -1,6 +1,6 @@
 <?php
-	include("admin/koneksi.php");
-	include("admin/cek_session_login.php");
+	include("sistem/koneksi_database.php");
+	include("sistem/cek_session_login.php");
 
 	$id_akun_utama=$_SESSION['id_akun_utama'];
 	$perintah5="SELECT * from reviews where id_jasa='$id_jasa' ORDER BY id DESC";
@@ -157,7 +157,7 @@
 	else 
 	{
 		echo "<div class=\"reviewform\">";
-		echo "<form name=\"form2\" method=\"post\" action=\"reviewproses.php\" onsubmit=\"return validate()\">";
+		echo "<form name=\"form2\" method=\"post\" action=\"../sistem/reviewproses.php\" onsubmit=\"return validate()\">";
 		echo "<table border=0>";
 		echo "<tr><td>Rating</td>";
 		echo "<td><select class=\"input\" name=\"rating\" required>

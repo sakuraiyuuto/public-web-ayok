@@ -1,20 +1,20 @@
 <?php
-include("../admin/cek_session.php");
-include("../admin/koneksi.php");
+	include("../sistem/cek_session.php");
+	include("../sistem/koneksi_database.php");
 ?>
 <html>
 <head>
 <title>Ayo Kerja !</title>
-<link rel="stylesheet" href="../admin/style.css">
+<link rel="stylesheet" href="../sistem/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  </head>
  <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="topnav" id="myTopnav">
   <a href="../index.php"><b>Home</b></a>
-  <a href="../logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
+  <a href="../sistem/logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
   <div class="box1">
-  <form name=form1 method=post action="../carijasa.php" onsubmit="return validate()">
+  <form name=form1 method=post action="../akun/carijasa.php" onsubmit="return validate()">
 <input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
 <input type=submit style="width:40px;height:30px;border-radius:10px;border:none;cursor:pointer;border:none;background-color:white;margin-left:1px;" value="Cari">
 </form>
@@ -35,14 +35,14 @@ function myFunction() {
 </script>
 <div class="block6">
 	<div class="font3">
-		<h2>Rumah Tangga</h2>
+		<h2>Pengajar</h2>
 		</div>
 		<div class="block2">
-<h3><center>Daftar jasa angkutan pindah rumah :</center></h3>
+<h3><center>Daftar jasa personal trainer :</center></h3>
 
 <div class="block7">
 <?php		
-		$id_kategori2='0604';
+		$id_kategori2='1002';
 $perintah="SELECT * FROM jasa WHERE id_kategorijasa LIKE '%$id_kategori2%' ORDER BY urutan DESC";
 $hasil=mysqli_query($konek, $perintah);
 if($row=mysqli_fetch_array($hasil))
@@ -59,9 +59,9 @@ while($row=mysqli_fetch_array($hasil)){
 		$perintah3="SELECT * FROM foto where id_jasa='$row[1]'";
 		$hasil3=mysqli_query($konek, $perintah3);
 			while($row3=mysqli_fetch_array($hasil3)){
-			$imageURL='../fotojasa/'.$row3[1];
+			$imageURL='../gambar/penyedia_jasa/'.$row3[1];
 }
-echo "<a href=\"../tampilanjasa.php?data1=$row[2]&data2=$row[3]\">";
+echo "<a href=\"../akun/tampilanjasa.php?data1=$row[2]&data2=$row[3]\">";
 		echo "<div class=\"box8\">";
 		if($row[10]>'0'){
 			echo "<div class=\"verified\">Verifikasi ✔️</div>";
