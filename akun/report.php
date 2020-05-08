@@ -1,6 +1,6 @@
 <?php
-include("cek_session.php");
-include("koneksi.php");
+include("../sistem/cek_session.php");
+include("../sistem/koneksi_database.php");
 
 $id_akun=$_SESSION['id_akun_utama'];
 $id_jasa=$_SESSION['id_jasa'];
@@ -18,16 +18,16 @@ else {
 <html>
 <head>
 <title>Ayo Kerja !</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../sistem/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  </head>
  <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="topnav" id="myTopnav">
   <a href="../index.php"><b>Home</b></a>
-  <a href="../logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
+  <a href="../sistem/logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
   <div class="box1">
-  <form name=form1 method=post action="../carijasa.php" onsubmit="return validate()">
+  <form name=form1 method=post action="carijasa.php" onsubmit="return validate()">
 <input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
 <input type=submit style="width:40px;height:30px;border-radius:10px;border:none;cursor:pointer;border:none;background-color:white;margin-left:1px;" value="Cari">
 </form>
@@ -52,7 +52,7 @@ function myFunction() {
 		</div>
 		<div class="block2">
 		<h3><center>Laporan anda terhadap jasa*</center></h3>
-		<form name="form1" method="post" action="reportproses.php">
+		<form name="form1" method="post" action="../sistem/reportproses.php">
 		<h5>Apa penyebab anda melaporkan jasa ini?<br><br>
 		<select class="input" name="jenis_laporan">
 <option></option>

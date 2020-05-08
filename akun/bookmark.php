@@ -14,7 +14,7 @@ include("../sistem/koneksi_database.php");
   <a href="../index.php"><b>Home</b></a>
   <a href="../sistem/logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
   <div class="box1">
-  <form name=form1 method=post action="../carijasa.php" onsubmit="return validate()">
+  <form name=form1 method=post action="carijasa.php" onsubmit="return validate()">
 <input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
 <input type=submit style="width:40px;height:30px;border-radius:10px;border:none;cursor:pointer;border:none;background-color:white;margin-left:1px;" value="Cari">
 </form>
@@ -66,9 +66,9 @@ while($row=mysqli_fetch_array($hasil))
 		$perintah3="SELECT * FROM foto where id_jasa='$row5[1]'";
 		$hasil3=mysqli_query($konek, $perintah3);
 			while($row3=mysqli_fetch_array($hasil3)){
-			$imageURL='../fotojasa/'.$row3[1];
+			$imageURL='../gambar/penyedia_jasa/'.$row3[1];
 }
-echo "<a href=\"../tampilanjasa.php?data1=$row[2]&data2=$row[3]\">";
+echo "<a href=\"tampilanjasa.php?data1=$row[2]&data2=$row[3]\">";
 		echo "<div class=\"box8\">";
 		if($row[10]>'0'){
 			echo "<div class=\"verified\">Verifikasi ✔️</div>";

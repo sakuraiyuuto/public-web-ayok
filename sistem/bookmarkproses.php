@@ -1,6 +1,6 @@
 <?php
-include("koneksi.php");
-include("cek_session.php");
+include("../sistem/koneksi_database.php");
+include("../sistem/cek_session.php");
 
 $id_jasa=$_SESSION['id_jasa'];
 $id_akun=$_SESSION['id_akun_utama'];

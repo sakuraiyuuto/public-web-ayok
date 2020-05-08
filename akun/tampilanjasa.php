@@ -230,7 +230,7 @@
 		?>
 		</div>
 	<div class="reportbookmark">
-		<a href="admin/report.php">Laporkan</a>
+		<a href="report.php">Laporkan</a>
 		<?php
 		$id_akun=$_SESSION['id_akun_utama'];
 		$perintah11="SELECT * FROM bookmark WHERE id_jasa='$id_jasa' AND id_akun='$id_akun'";
@@ -244,7 +244,7 @@
 		else
 		{
 			?>
-				<a href="admin/bookmarkproses.php">Simpan</a>
+				<a href="../sistem/bookmarkproses.php">Simpan</a>
 			<?php
 		}
 
