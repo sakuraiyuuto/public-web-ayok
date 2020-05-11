@@ -57,11 +57,7 @@
 			}
 		}
 	</script>
-	
-	<?php
-		$email=$_POST['email'];
-		$_SESSION['email']=$username;
-	?>
+
 
 	<div class="block1">
 		<div class="font2">
