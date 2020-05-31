@@ -1,0 +1,132 @@
+body{
+	margin: 0;
+    padding: 0;
+    height: auto;
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+}
+
+*{
+	box-sizing: border-box;
+	outline: none!important;
+	text-decoration: none!important;	
+}
+
+.register-form {
+	font-family:verdana;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+}
+
+.register-form .box
+{
+	min-width: 400px;
+	min-height: 450px;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.register-form .box .tombol-kembali {
+	text-align: right;
+}
+
+.register-form .box .tombol-kembali a{
+	color: #d73a23;
+	font-size: 2vh;
+}
+
+.register-form .box .heading h1{
+	color: #242424;
+	font-size: 6vw;
+	text-align: left;
+	margin:15px 0px 10px;
+	padding-bottom: 10px;
+}
+
+.register-form .box .form-fields{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.register-form .box .form-fields .input-box{
+	position:relative;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.register-form .box .form-fields .input-box p{
+	padding-bottom: 10px;
+	margin: 0px;
+	font-size: 2vh;
+}
+
+.register-form .box .form-fields .term p{
+	text-align: center;
+	font-size : 1.5vh;
+}
+
+.register-form .box .form-fields .input-box .form-control{
+	font-size: 3vh;
+	height: auto;
+	width: 100%;
+	padding:0px 0px 5px 0px;
+	columns: #242424;
+	background-color: transparent;
+	border:transparent;
+	border-bottom: 1px solid;
+	text-underline-offset: 1px solid black;
+}
+
+.register-form .box .form-fields .input-box .form-control::placeholder{
+	color: #cccccc;
+}
+
+
+.register-form .box .form-fields .button-box{
+	width: 100%;
+	display: flex;
+	padding-top: 20px ;
+}
+
+.register-form .box .form-fields .button-box button{
+	color:#ffffff;
+	font-size: 2vh;
+	width: 100%;
+	padding: 12px 35px;
+	background-color: #f4aa19;
+	transition: box-shadow .5s ease;
+	border: none;
+	cursor: pointer;
+	margin-right: 10px;
+	border-radius: 21px;
+}
+
+.register-form .box .form-fields .button-box button:hover{
+	box-shadow: 0px 0px 10px #cccccc;
+}
+
+.register-form .box .buat-akun p{
+	text-align: center;
+	font-size: 2vh;
+}
+
+.register-form .box .buat-akun p a{
+	color: #d73a23;
+}
+
+/*responsive*/
+@media(max-width: 500px)
+{
+	.register-form .box{
+		min-width: 100%;
+	}
+
+	.register-form form{
+		min-width: 100%;
+	}
+}

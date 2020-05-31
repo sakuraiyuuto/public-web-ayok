@@ -1,0 +1,139 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	
+}
+
+*{
+	box-sizing: border-box;
+	outline: none!important;
+	text-decoration: none!important;	
+}
+
+.login-form {
+	height: 100vh;
+	font-family:verdana;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+}
+
+.login-form .box
+{
+	min-width: 400px;
+	min-height: 450px;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.login-form .box .img img {
+	width:60%;
+	margin:auto;
+	display:block;
+}
+
+.login-form .box .description p{
+	text-align:center;
+	color: #d73a23;
+	font-size: 5vw;
+}
+
+.login-form .box .heading h1{
+	color: #242424;
+	font-size: 6vw;
+	text-align: left;
+	margin:15px 0px 10px;
+	padding-bottom: 10px;
+}
+
+.login-form .box .form-fields{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.login-form .box .form-fields .input-box{
+	position:relative;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.login-form .box .form-fields .input-box .form-control{
+	font-size: 3vh;
+	height: 40px;
+	width: 100%;
+	padding:0px 0px 0px 45px;
+	columns: #242424;
+	background-color: transparent;
+	border:transparent;
+	border-bottom: 1px solid;
+	text-underline-offset: 1px solid black;
+}
+
+.login-form .box .form-fields .input-box .form-control::placeholder{
+	color: #cccccc;
+}
+
+.login-form .box .form-fields .input-box span{
+	position:absolute;
+	left: 0px;
+	top:0px;
+	height: 100%;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+}
+
+.login-form .box .form-fields .input-box span img{
+	width: 22px;
+}
+
+.login-form .box .form-fields .button-box{
+	width: 100%;
+	display: flex;
+	padding-top: 20px ;
+}
+
+.login-form .box .form-fields .button-box button{
+	color:#ffffff;
+	font-size: 2vh;
+	width: 100%;
+	padding: 12px 35px;
+	background-color: #f4aa19;
+	transition: box-shadow .5s ease;
+	border: none;
+	cursor: pointer;
+	margin-right: 10px;
+	border-radius: 21px;
+}
+
+.login-form .box .form-fields .button-box button:hover{
+	box-shadow: 0px 0px 10px #cccccc;
+}
+
+.login-form .box .buat-akun p{
+	text-align: center;
+	font-size: 2vh;
+}
+
+.login-form .box .buat-akun p a{
+	color: #d73a23;
+}
+
+/*responsive*/
+@media(max-width: 500px)
+{
+	.login-form .box{
+		min-width: 100%;
+	}
+
+	.login-form form{
+		min-width: 100%;
+	}
+}
