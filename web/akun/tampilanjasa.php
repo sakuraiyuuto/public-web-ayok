@@ -16,7 +16,7 @@
 		<a href="../sistem/logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
 		<div class="box1">
 			<form name=form1 method=post action="carijasa.php" onsubmit="return validate()">
-				<input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
+				<input class=input type=text name=cari maxlength=100 placeholder="Cari jasa klik disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
 				<input type=submit style="width:40px;height:30px;border-radius:10px;border:none;cursor:pointer;border:none;background-color:white;margin-left:1px;" value="Cari">
 			</form>
 		</div>
@@ -38,10 +38,16 @@
 	  }
 	}
 	</script>
+	
 	<div class="block6">
 		<div class="font3">
 			<h2>Jasa pilihan kamu :</h2>
 		</div>
+		
+		
+		<div class=kiri>
+		
+		
 		<div class="block2">
 			<h3><center>
 			<?php 
@@ -122,9 +128,40 @@
 			?>
 			</center></h3>
 		</div>
+		
+		
+		
+		
+		
+		
 		<div class="box9">
 		<div class="part">
 		<?php
+		
+		echo "<div class=\"part\">";
+			$perintah1 = "SELECT * FROM foto where id_jasa ='$id_jasa'";
+			$result = mysqli_query($konek , $perintah1 );
+			if(mysqli_fetch_assoc($result))
+			{
+				$query = $konek->query("SELECT * FROM foto where id_jasa='$id_jasa'");
+				if($query->num_rows > 0)
+				{
+					while($row = $query->fetch_assoc())
+					{
+						$imageURL = '../gambar/penyedia_jasa/'.$row["nama_foto"];
+						// Get images from the database
+						?>
+						<img src="<?php echo $imageURL; ?>" alt="" />
+						</div>
+						<?php
+						echo "<div class=\"part2\">";
+						echo "</div>";
+						
+						
+						
+						
+						
+		
 		$perintah = "SELECT * FROM jasa where id_akun='$id_akun'";
 		$hasil=mysqli_query($konek, $perintah);
 		if($row=mysqli_fetch_array($hasil))
@@ -142,7 +179,9 @@
 				$nama_kategori="$row2[3]";
 				$_SESSION['nama_kategori']=$nama_kategori;
 				echo "</div></div>";
-			}				
+			}
+
+			
 					
 			echo "<div class=\"box3\">";
 			echo "<div class=\"data1\"><b>";
@@ -201,26 +240,9 @@
 			echo "<div class=\"data2\">";
 			echo "$row[8]";echo "<br>";
 			echo "</div></div>";
-
+			
 			echo "</div>";
-			echo "<div class=\"part\">";
-			$perintah1 = "SELECT * FROM foto where id_jasa ='$id_jasa'";
-			$result = mysqli_query($konek , $perintah1 );
-			if(mysqli_fetch_assoc($result))
-			{
-				$query = $konek->query("SELECT * FROM foto where id_jasa='$id_jasa'");
-				if($query->num_rows > 0)
-				{
-					while($row = $query->fetch_assoc())
-					{
-						$imageURL = '../../database/akun/foto_jasa/'.$row["nama_foto"];
-						// Get images from the database
-						?>
-						<img src="<?php echo $imageURL; ?>" alt="" />
-						</div>
-						<?php
-						echo "<div class=\"part2\">";
-						echo "</div>";
+			
 					}
 				}
 			}
@@ -229,6 +251,32 @@
 		}
 		?>
 		</div>
+		
+		
+		
+		
+		
+		<section>
+		<div class="sosmed">
+					 <div class="isi-sosmed">
+						 <a href="https://github.com/sakuraiyuuto/public-web-ayok" target="_blank"><img img style="width:50px;" src="./assets/images/github.png"> </a>
+						 <a href="https://web.whatsapp.com/" target="_blank"><img img style="width:50px;" src="./assets/images/wa2.png"></a>
+						 <a href="https://www.instagram.com/" target="_blank"><img img style="width:50px;" src="./assets/images/ig.png"> </a>
+						 <a href="mail.google.com" target="_blank"><img img style="width:50px;"  src="./assets/images/gmail.png"></a>
+						 <a href="https://www.facebook.com/" target="_blank"><img style="width:50px;" src="./assets/images/fb.png"></a>
+
+					 </div>
+				 </div>
+				 </section>
+				 
+		
+		
+		
+	
+		
+		
+		
+		
 	<div class="reportbookmark">
 		<a href="report.php">Laporkan</a>
 		<?php
@@ -250,11 +298,31 @@
 
 			?>
 	</div>
+		
+		
+		
+		
+		
+		
+		
+		</div>
+	
+	
+	
+	
+	
+	
+
+	
+	<div class=kanan>
+	
+	
 	<div class="reviewbox">
 		<h2>Rating dan Ulasan</h2>
 		<?php
 			include ("review.php"); 
 		?>
+	</div>
 	</div>
 	</div>
 		<?php
