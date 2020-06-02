@@ -5,24 +5,12 @@
 <html>
 <head>
 	<title>Ayo Kerja !</title>
-	<link rel="stylesheet" href="../sistem/style.css">
+	<link rel="stylesheet" href="../sistem/profile.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<div class="topnav" id="myTopnav">
-		<a href="../index.php"><b>Home</b></a>
-		<a href="../sistem/logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
-		<div class="box1">
-			<form name=form1 method=post action=carijasa.php onsubmit="return validate()">
-				<input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
-				<input type=submit style="width:40px;height:30px;border-radius:10px;border:none;cursor:pointer;border:none;background-color:white;margin-left:1px;" value="Cari">
-			</form>
-		</div>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<i class="fa fa-bars"></i>
-		</a>
-	</div>
+
 	<script type="text/javascript">
 		//jika kotak pencarian kosong
 		function validate()
@@ -271,7 +259,19 @@
 						echo "</div>";
 					}
 ?>
-</div></div></div>
-<?php
-include("../footer.php");
-?>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<nav class="nav">
+  <a href="#" class="nav__link nav__link--active"">
+    <i class="material-icons nav__icon">dashboard</i>
+    <span class="nav__text">Home</span>
+  </a>
+  <a href="#" class="nav__link">
+    <i class="material-icons nav__icon">devices</i>
+    <span class="nav__text">Order</span>
+  </a>
+  <a href="akun/profil.php" class="nav__link">
+    <i class="material-icons nav__icon">person</i>
+    <span class="nav__text">Profile</span>
+  </a>
+</nav>
+</body>

@@ -1,0 +1,156 @@
+body {
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+}
+
+.home {
+    border:none;
+    color:white;
+    width: 100%;
+    padding-top:0%;
+    margin-top:0%;
+    background-color:#df3c24;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+.home a {
+    text-decoration:none;
+}
+
+.home .pencarian_jasa form{
+    padding-top: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+.home .deskirpsi_home {
+    font-family:"Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    width:auto;
+    padding-top:5%;
+    padding-left:10%;
+    padding-right:5%;
+    padding-bottom:5%;
+}
+
+.home .deskirpsi_home h1 {
+    font-size:6vw;
+    margin: 0px;
+     padding-bottom: 5px;
+}
+
+.home .deskirpsi_home p{
+    margin: 0px;
+    font-size: 3vw;
+}
+
+.home .deskirpsi_home .tombol_rekomendasi {
+    font-size:3vw;
+    height:auto;
+    width: 40%;
+    text-align: center;
+    border:none;
+    background-color:#f4aa19;
+    color:white;
+    margin-top:10px;
+    padding:5px 10px;
+    border-radius:30px;
+    font-family:verdana;
+    transition:0.2s;
+}
+    
+.home .deskirpsi_home .tombol_rekomendasi:hover {
+    background-color:#f4aa19;
+}
+
+.home_menu {
+    background-color:white;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    border-radius: 70px 70px 0px 0px;
+    border:none;
+    color:rgb(20,20,20);
+    padding-top:10%;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:5%;
+    width:auto;
+    height: auto;
+}	
+
+.home_menu h3 {
+    font-size:88%;
+}
+       
+.home_menu .kategori_jasa {
+    width:100%;
+}
+
+.home_menu .kategori_jasa a {
+    text-decoration:none;
+    color:white;
+}
+        
+.home_menu .kategori_jasa .kotak_jasa {
+    padding-top:3%;
+    display:inline-block;
+    width:20%;
+    margin-left:2%;
+    margin-right:2%;
+    margin-top:2%;
+    margin-bottom:2%;
+    height:70px;
+    background-color:#c30000;
+    height:110px;
+    vertical-align:bottom;
+    text-align:center;
+    transition:0.2s;
+    font-size: 3vw;
+}
+
+.home_menu .kategori_jasa .kotak_jasa img {
+    width:50%;
+}
+        
+.home_menu .kategori_jasa .kotak_jasa:hover {
+    background-color:rgb(200,60,40);
+}
+  
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+    background-color: #eeeeee;
+}
+
+.nav__link--active {
+    color: #f4aa19;
+}
+
+.nav__icon {
+    font-size: 18px;
+}
