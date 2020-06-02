@@ -141,6 +141,16 @@ padding-bottom:5%;
 }
 
 
+.kiri {
+	width: 50%;
+	float: left;
+}
+
+.kanan{
+	width: 50%;
+	float: right;
+}
+
 .block2 {
 background-color:white;
 font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
@@ -299,9 +309,11 @@ padding-top:2%;
 }
 
 .box9 .part img {
-	width:70%;
+	width:100px;
+	height: 100px;
 	border:2px solid black;
 	margin-left:15%;
+	border-radius: 50%;
 }
 
 
@@ -806,7 +818,10 @@ border-top:2px solid white;
 	}
 }
 
-
+.sosmed {
+	width: 100%;
+	text-align: center;
+}
 
 @media (max-width: 800px) {
 	.block1 {
@@ -1168,4 +1183,3 @@ font-family:verdana;
 	font-size:80%;
 }
 }
-
