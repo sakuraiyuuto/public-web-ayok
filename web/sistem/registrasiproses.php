@@ -2,7 +2,6 @@
 	include ("../sistem/koneksi_database.php");
 	session_start();
 	$_SESSION["login"] = true;
-
 	//mengambil data kiriman
 	$nama=$_POST['nama'];
 	$email=$_POST['email'];

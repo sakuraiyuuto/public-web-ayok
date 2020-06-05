@@ -44,23 +44,24 @@
 			$_SESSION["password_tidak_cocok"] = true;
 		return false;
 	}
-	
-	//membuat akun
-	$password = password_hash($password, PASSWORD_DEFAULT);
-	$perintah = "INSERT INTO user (id_akun, nama, email, nomor_telepon, password) VALUES ('$id_akun', '$nama', '$email', '$nomor_telepon', '$password')";
-	mysqli_query($konek , $perintah);
-	SESSION_START();
-	echo "<script>
-			alert ('Anda berhasil daftar!');
+	else
+	{
+		//membuat akun
+		$password = password_hash($password, PASSWORD_DEFAULT);
+		$perintah = "INSERT INTO user (id_akun, nama, email, nomor_telepon, password) VALUES ('$id_akun', '$nama', '$email', '$nomor_telepon', '$password')";
+		mysqli_query($konek , $perintah);
+		SESSION_START();
+		echo "<script>
 			window.location.replace(\"../akun/profil.php\");
-		  </script>";
-		 
-	//session_login
-	$_SESSION["login"] = true;
-	$_SESSION['nama']=$nama;
-	$_SESSION['id_akun']=$id_akun;
-	$_SESSION['nama']=$nama;
-	$_SESSION['email']=$email;
-	$_SESSION['nomor_telepon']=$nomor_telepon;
-	$_SESSION['password']=$password;
+			</script>";
+			
+		//session_login
+		$_SESSION["login"] = true;
+		$_SESSION['nama']=$nama;
+		$_SESSION['id_akun']=$id_akun;
+		$_SESSION['nama']=$nama;
+		$_SESSION['email']=$email;
+		$_SESSION['nomor_telepon']=$nomor_telepon;
+		$_SESSION['password']=$password;
+	}
 ?>

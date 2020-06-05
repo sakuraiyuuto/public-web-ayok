@@ -261,7 +261,7 @@
 ?>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <nav class="nav">
-  <a href="#" class="nav__link nav__link--active"">
+  <a href="../index.php" class="nav__link">
     <i class="material-icons nav__icon">dashboard</i>
     <span class="nav__text">Home</span>
   </a>
@@ -269,7 +269,7 @@
     <i class="material-icons nav__icon">devices</i>
     <span class="nav__text">Order</span>
   </a>
-  <a href="akun/profil.php" class="nav__link">
+  <a href="#" class="nav__link nav__link--active">
     <i class="material-icons nav__icon">person</i>
     <span class="nav__text">Profile</span>
   </a>
