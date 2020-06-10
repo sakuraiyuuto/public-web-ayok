@@ -1,13 +1,23 @@
 body {
     margin: 0px 0px 0px 0px;
     height: 100%;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.profilisi{
+    border: none;
+    color: white;
+    width: 100%;
+    padding-top: 0%;
+    margin-top: 0%;
+    background-color: red;
+    height: 90%;
+    overflow-y: scroll;
 }
 
 .block1 {
-    margin-top:1%;
     border:none;
     color:white;
-    padding-top:1%;
     background-color: rgba(230, 60, 40, 1);
 }
     
@@ -26,8 +36,6 @@ body {
     font-size:120%;
     font-family:"Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     text-align:center;
-    margin-top:20%;
-    margin-bottom:10%;
 }
 
 .block1 h1 {
@@ -80,7 +88,6 @@ body {
 .block2 {
     background-color:white;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-    border-radius: 70px 70px 0px 0px;
     border:none;
     color:rgb(20,20,20);
     padding-left:5%;
@@ -269,4 +276,41 @@ body {
 
 .nav__icon {
     font-size: 18px;
+}
+
+.menuprofil {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+}
+
+.kotakprofil{
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    background-color: white;
+    height: auto;
+    color: black;
+    text-align: center;
+}
+
+.buttonlogout {
+	text-align:center;
+	margin-top:10%;
+    margin-bottom:7%;
+    font-size:80%;
+}
+
+.buttonlogout a {
+	text-decoration:none;
+	color:white;
+	padding:7px 13px;
+	background-color:rgb(240,180,40);
+	border-radius:10px;
 }

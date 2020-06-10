@@ -270,9 +270,9 @@
     <i class="material-icons nav__icon">dashboard</i>
     <span class="nav__text">Home</span>
   </a>
-  <a href="#" class="nav__link">
-    <i class="material-icons nav__icon">devices</i>
-    <span class="nav__text">Order</span>
+  <a href="akun/bookmark.php" class="nav__link">
+    <i class="material-icons nav__icon">bookmark</i>
+    <span class="nav__text">Bookmark</span>
   </a>
   <a href="akun/profil.php" class="nav__link">
     <i class="material-icons nav__icon">person</i>
@@ -280,4 +280,8 @@
   </a>
 </nav>
 
-	</body>
+<!--<div class="profilbookmark">
+				<a href="bookmark.php">Lihat jasa tersimpan</a>
+			</div>
+-->
+		</body>

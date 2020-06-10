@@ -152,3 +152,19 @@ else {
 			</div>
 			</div>
 			
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<nav class="nav">
+  <a href="#" class="nav__link nav__link--active"">
+    <i class="material-icons nav__icon">dashboard</i>
+    <span class="nav__text">Home</span>
+  </a>
+  <a href="akun/bookmark.php" class="nav__link">
+    <i class="material-icons nav__icon">bookmark</i>
+    <span class="nav__text">Bookmark</span>
+  </a>
+  <a href="akun/profil.php" class="nav__link">
+    <i class="material-icons nav__icon">person</i>
+    <span class="nav__text">Profile</span>
+  </a>
+</nav>
+			
