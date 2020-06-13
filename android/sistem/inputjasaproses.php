@@ -53,7 +53,8 @@
 				if($result3) 
 				{
 					echo "<script>
-							window.location.replace(\"../akun/profilpenyediajasa.php\");
+							alert ('Anda berhasil menjadi penyedia jasa!');
+							window.location.replace(\"../akun/profil.php\");
 						</script>";
 				}
 			}

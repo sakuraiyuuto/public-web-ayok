@@ -170,12 +170,8 @@ body {
    
 	text-decoration:none;
 	color:white;
-	padding:2% 10%;
-	background-color:white;
-    border-radius:20px;
-    border: 2px solid gray;
-    color : gray;
 
-    font-weight: bold;
+	padding:7px 13px;
+	background-color:rgb(240,180,40);
+	border-radius:10px;
 }
-
