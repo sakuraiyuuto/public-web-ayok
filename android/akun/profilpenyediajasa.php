@@ -9,42 +9,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="text/javascript">
-		//jika kotak pencarian kosong
-		function validate()
-		{
-			obj = document.form1;
-			cari = obj.cari.value;
-			submitOK="True";
-			if (cari =="")
-			{
-				alert("Masukkan kata kunci untuk cari!");
-				obj.cari.focus();
-				return false;
-			}
-
-			if (submitOK == false)
-			{
-				return false;
-			}
-		}
-	</script>
-	<script>
-		function myFunction() 
-		{
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") 
-			{
-				x.className += " responsive";
-			} 
-			else 
-			{
-				x.className = "topnav";
-			}
-		}
-	</script>
-
 	<div class="profilisi">
 		<div class="profilatas">	
 			<div class="profilpict">
