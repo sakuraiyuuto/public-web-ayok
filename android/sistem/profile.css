@@ -170,93 +170,6 @@ body {
    
 	text-decoration:none;
 	color:white;
-<<<<<<< HEAD
-	padding:7px 13px;
-	background-color:rgb(240,180,40);
-	border-radius:10px;
-}
-
-
-.box9 .box3 {
-	display:flex;
-	margin-top:2%;
-	margin-bottom:2%;
-}
-
-.box9 .box3 .data1 {
-	border:none;
-	flex:40%;
-	padding-left:10%;
-	padding-top:2%;
-}
-
-.box9 .box3 .data2 {
-	border:none;
-	flex:60%;
-	padding-left:5%;
-	padding-top:2%;
-}
-
-.box9 {
-	background-color:white;
-	color:rgb(20,20,20);
-	padding-left:10%;
-	font-family:"Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-	padding-bottom:6%;
-	padding-right:10%;
-}
-
-.box9 a {
-	background-color:rgb(240,180,40);
-	color:white;
-	padding:7px 16px;
-    border-radius:10px;
-    font-size:80%;
-}
-
-
-
-.box9 .part {
-		display:inline-block;
-        width:100%;
-	vertical-align:top;
-        height:auto;
-        margin-left:0;
-        margin-bottom:5%;
-        font-size:70%;
-}
-
-
-.box9 .part img {
-	width:70%;
-	border:2px solid black;
-	margin-left:15%;
-}
-
-
-.box9 .part2 {
-		display:inline-block;
-        width:100%;
-    margin-right:2%;
-    margin-bottom:7%;
-	vertical-align:top;
-	margin-left:2%;
-    height:auto;
-    font-size:80%;
-    text-align:center;
-}
-
-
-.box9 .part2 img {
-    width:80%;
-	height:auto;
-    padding:0;
-    margin-left:10%;
-    margin-right:10%;
-	margin-top:5%;
-	border:2px solid black;
-}
-=======
 	padding:2% 10%;
 	background-color:white;
     border-radius:20px;
@@ -266,4 +179,3 @@ body {
     font-weight: bold;
 }
 
->>>>>>> cf9eab9ce4bb60cc053b38810ecbd2608822d0ac
