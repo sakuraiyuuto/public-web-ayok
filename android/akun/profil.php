@@ -46,20 +46,24 @@
 	</script>
 
 	<div class="profilisi">
-		<div class="block1">
-			
-			<div class="kotakprofil">
+		<div class="profilatas">	
 			<div class="profilpict">
-					<img src="../gambar/akun/profil.png"style="width:100%;height:100%;">
-				</div>
-				<div class="font2">
+				<img src="../gambar/akun/profil.png"style="width:100%;height:100%;">
+			</div>
+			<div class="kotakprofil">
+				
+				<div class="namauser">
 					<?php
 						session_start();
 						echo $_SESSION['nama'];
 					?>
 				</div>
 			</div>
-			<div class="menuprofil">
+				
+		</div>
+
+		<div class="profilbawah">
+		<div class="menuprofil">
 				<a href="#" class="nav__link nav__link--active">
 					<i class="material-icons nav__icon">face</i>
 					<span class="nav__text">Data Pribadi</span>
@@ -68,10 +72,8 @@
 					<i class="material-icons nav__icon">card_travel</i>
 					<span class="nav__text">Penyedia Jasa</span>
 				</a>
-			</div>				
-			<div class="block2">
-			
-				<div class="box3">
+			</div>		
+				<div class="biodatauser">
 					<div class="data1">
 						<?php
 							echo "<b>Id Akun</b>";?>
@@ -85,7 +87,7 @@
 					</div>
 				</div>
 
-				<div class="box3">
+				<div class="biodatauser">
 					<div class="data1">
 						<?php
 							echo "<b>Nama</b>";
@@ -97,7 +99,7 @@
 					</div>
 				</div>
 
-				<div class="box3">
+				<div class="biodatauser">
 					<div class="data1">
 						<?php
 							echo "<b>Email</b>";?></div>
@@ -108,7 +110,7 @@
 					</div>
 				</div>
 
-				<div class="box3">
+				<div class="biodatauser">
 					<div class="data1">
 						<?php
 							echo "<b>Nomor Telepon</b>";
@@ -124,9 +126,8 @@
 				<div class="buttonlogout">
 					<a href="../sistem/logout.php" class="button">Logout</a>
 				</div>
-			</div>
-		
-		</div>
+		</div>	
+	</div>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <nav class="nav">
   <a href="../index.php" class="nav__link">

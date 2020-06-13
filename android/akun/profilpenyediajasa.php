@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title>Ayo Kerja !</title>
-	<link rel="stylesheet" href="../sistem/profile.css">
+	<link rel="stylesheet" href="../sistem/profilpenyediajasa.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -46,21 +46,25 @@
 	</script>
 
 	<div class="profilisi">
-		<div class="block1">
-			
-			<div class="kotakprofil">
+		<div class="profilatas">	
 			<div class="profilpict">
-					<img src="../gambar/akun/profil.png"style="width:100%;height:100%;">
-				</div>
-				<div class="font2">
+				<img src="../gambar/akun/profil.png"style="width:100%;height:100%;">
+			</div>
+			<div class="kotakprofil">
+				
+				<div class="namauser">
 					<?php
 						session_start();
 						echo $_SESSION['nama'];
 					?>
 				</div>
 			</div>
-			<div class="menuprofil">
-				<a href="profil.php" class="nav__link">
+				
+		</div>
+
+		<div class=profilbawah>
+		<div class="menuprofil">
+				<a href="profil.php" class="nav__link ">
 					<i class="material-icons nav__icon">face</i>
 					<span class="nav__text">Data Pribadi</span>
 				</a>
@@ -68,8 +72,8 @@
 					<i class="material-icons nav__icon">card_travel</i>
 					<span class="nav__text">Penyedia Jasa</span>
 				</a>
-			</div>				
-			<div class="box9">
+			</div>		
+		<div class="box9">
 			<div class="part">
 				<?php
 					$id_akun=$_SESSION['id_akun'];
@@ -216,6 +220,8 @@
 			</div>
 		
 		</div>
+		</div>	
+	</div>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <nav class="nav">
   <a href="../index.php" class="nav__link">
