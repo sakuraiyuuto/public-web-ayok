@@ -21,6 +21,9 @@
 		$telepon=$_POST['telepon'];
 		$id_jasa=base_convert(microtime(false), 10, 36).substr($nama_jasa,0,3);
 	?>
+
+		
+	
 	<?php
 		$perintah1 = "SELECT id_akun FROM jasa WHERE id_akun ='$id_akun'";
 		$result2 = mysqli_query($konek , $perintah1 );
@@ -53,8 +56,7 @@
 				if($result3) 
 				{
 					echo "<script>
-							alert ('Anda berhasil menjadi penyedia jasa!');
-							window.location.replace(\"../akun/profil.php\");
+							window.location.replace(\"../akun/profilpenyediajasa.php\");
 						</script>";
 				}
 			}

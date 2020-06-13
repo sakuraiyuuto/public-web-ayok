@@ -31,7 +31,7 @@
 				{
 					$insert = $konek->query("INSERT into foto (id_jasa, nama_foto) VALUES ('$id_jasa', '$fileName')");
 				}
-				echo "<script>window.location.replace(\"../akun/profil.php\")</script>";
+				echo "<script>window.location.replace(\"../akun/profilpenyediajasa.php\")</script>";
 			}
 		}
 	}

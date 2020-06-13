@@ -38,8 +38,7 @@
 			if($result)
 			{
 				echo "<script>
-						alert ('Anda berhasil perbarui jasa anda!');
-						window.location.replace(\"../akun/profil.php\");
+						window.location.replace(\"../akun/profilpenyediajasa.php\");
 					</script>";
 			}
 			else 
