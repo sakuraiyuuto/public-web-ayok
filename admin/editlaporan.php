@@ -36,6 +36,11 @@ if(!isset($_SESSION["log"])) {
 					</a>
 				</li>
 				<li>
+					<a href="manajemen_akun_admin.php">
+						<span>Akun Admin</span>
+					</a>
+				</li>
+				<li>
 					<a href="logout.php">	
 						<span>Log Out</span>
 					</a>
@@ -55,6 +60,19 @@ if(!isset($_SESSION["log"])) {
 					</div>
 						<div class="table-data">
 							<table>
+								<tr>
+									<th>Id Laporan</th>
+									<th>Id Jasa</th>
+									<th>Id Akun</th>
+									<th>Jenis Laporan</th>
+									<th>Laporan</th>
+								<tr>
+									<td align = 'center'><?= $laporan['id']; ?></td>
+									<td align = 'center'><?= $laporan['id_jasa']; ?></td>
+									<td align = 'center'><?= $laporan['id_akun']; ?></td>
+									<td align = 'center'><?= $laporan['jenis_laporan']; ?></td>
+									<td><?= $laporan['laporan']; ?></td>
+								</tr>
 							</table>
 						</div>		
 						<div class="kolom-edit">
@@ -63,16 +81,18 @@ if(!isset($_SESSION["log"])) {
 								<b><?= $laporan['id']; ?></b><br>
 								<table cellpadding = '5'>
 									<tr>
-										<td align = 'left'><b>Id Jasa</b></td>
-										<td><input type = "text" name = "idjasa" value = '<?= $laporan['id_jasa']; ?>'></td>
-									</tr>
-									<tr>
-										<td align = 'left'><b>Id Akun</b></td>
-										<td><input type = "text" name = "idakun" value = '<?= $laporan['id_akun']; ?>'></td>
-									</tr>
-									<tr>
 										<td align = 'left'><b>Jenis Laporan</b></td>
-										<td><input type = "text" name = "jenis" value = '<?= $laporan['jenis_laporan']; ?>'></td>
+										<td>
+											<select class="input" name="jenis_laporan" class="form-control" required="">>
+												<option value="<?= $laporan['jenis_laporan']; ?>" selected hidden><?= $laporan['jenis_laporan']; ?></option>
+												<option>Jasa tidak sesuai keterangan di aplikasi</option>
+												<option>Jasa melakukan pelayanan yang sangat buruk</option>
+												<option>Jasa melakukan penipuan</option>
+												<option>Penyedia Jasa melakukan tindak kriminal</option>
+												<option>Jasa mengandung SARA dan kata-kata tidak pantas</option>
+												<option>Lain-lain</option>
+											</select>
+										</td>
 									</tr>
 									<tr>
 										<td align = 'left'><b>Laporan</b></td>
@@ -89,13 +109,13 @@ if(!isset($_SESSION["log"])) {
 	</div>
 	<?php 				
 		if(isset($_POST['ubah'])){
-			$jenislaporan = $_POST['jenis'];
+			$jenislaporan = $_POST['jenis_laporan'];
 			$laporan = $_POST['laporan'];
 			
 			$update = mysqli_query($link,"UPDATE report SET jenis_laporan = '$jenislaporan', laporan = '$laporan' WHERE id = '$idlaporan'");
 			$sql = mysqli_fetch_assoc($update);
 			echo"<script>
-					document.location.href = 'editlaporan.php';
+					document.location.href = 'editlaporan.php?id=$idlaporan';
 				</script>";
 		}
 		else if(isset($_POST['batal'])) {

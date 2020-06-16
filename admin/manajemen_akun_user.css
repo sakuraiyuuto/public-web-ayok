@@ -35,22 +35,28 @@ body{
 }
 
 
+.main-content .isi-content .kotak-pencarian{
+    padding-top: 5%;
+}
+
 .main-content .isi-content .table-data{
     width: 100%;
     height: auto;
     overflow-y: auto;
+
 }
 
 .main-content .isi-content .table-data table{
+    border-left : 1px solid #ddd;
+    border-right: 1px solid #ddd;
     table-layout: auto;
     width: 100%;
     border-collapse: collapse;
     font-size: 1vw;
-    border-left : 1px solid #ddd;
-    border-right: 1px solid #ddd;
 }
 
 .main-content .isi-content .table-data th{
+
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;

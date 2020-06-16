@@ -36,6 +36,11 @@ if(!isset($_SESSION["log"])) {
 					</a>
 				</li>
 				<li>
+					<a href="manajemen_akun_admin.php">
+						<span>Akun Admin</span>
+					</a>
+				</li>
+				<li>
 					<a href="logout.php">	
 						<span>Log Out</span>
 					</a>
@@ -48,7 +53,7 @@ if(!isset($_SESSION["log"])) {
 		<?php		
 			$idrvw  = $_GET['id'];
 			$sql = mysqli_query($link,"SELECT a.id_jasa, b.id, c.id_akun, b.content, b.rating from jasa a 
-								INNER JOIN reviews b ON a.id_jasa = b.id_jasa INNER JOIN user c ON b.id_akun = c.id_akun WHERE id = '$idrvw'");
+								INNER JOIN reviews b ON a.id_jasa = b.id_jasa INNER JOIN user c ON b.id_akun = c.id_akun WHERE b.id = '$idrvw'");
 			$rvw = mysqli_fetch_assoc($sql);
 		?>
 					<div class="judul-konten">
@@ -56,6 +61,19 @@ if(!isset($_SESSION["log"])) {
 					</div>
 						<div class="table-data">
 							<table>
+								<tr>
+									<th>Id Review</th>
+									<th>Id Jasa</th>
+									<th>Id Akun</th>
+									<th>Ulasan</th>
+									<th>Rating</th>
+								<tr>
+									<td align = 'center'><?= $rvw['id']; ?></td>
+									<td align = 'center'><?= $rvw['id_jasa']; ?></td>
+									<td align = 'center'><?= $rvw['id_akun']; ?></td>
+									<td><?= $rvw['content']; ?></td>
+									<td align = 'center'><?= $rvw['rating']; ?></td>
+								</tr>
 							</table>
 						</div>		
 						<div class="kolom-edit">
@@ -64,12 +82,24 @@ if(!isset($_SESSION["log"])) {
 								<b><?= $rvw['id']; ?></b><br>
 								<table cellpadding = '5'>
 									<tr>
-										<td align = 'left'><b>Content</b></td>
-										<td><textarea name = "content"><?= $rvw['content']; ?></textarea></td>
+										<td align = 'left'><b>Ulasan</b></td>
+										<td>
+										<textarea name = "content" placeholder="..."  class="form-control" required="" autocomplete="off"
+											oninvalid="this.setCustomValidity('Masukkan Keterangan')"
+											oninput="setCustomValidity('')"><?= $rvw['content']; ?></textarea>
+										</td>
 									</tr>
 									<tr>
 										<td align = 'left'><b>Rating</b></td>
-										<td><input type = "text" name = "rating" value = '<?= $rvw['rating']; ?>'></td>
+										<td>
+										<select class="input" name="rating" class="form-control" required="">
+											<option value="<?= $rvw['rating']; ?>" selected hidden><?= $rvw['rating']; ?></option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>						
+										</select>
 									</tr>
 									<tr>
 										<td colspan = '2' align = 'right'><input type = "submit" value = 'Edit' name = 'ubah'></td>
@@ -88,11 +118,13 @@ if(!isset($_SESSION["log"])) {
 			$update = mysqli_query($link,"UPDATE reviews SET content = '$content', rating = '$rating' WHERE id = '$idrvw'");
 			$sql = mysqli_fetch_assoc($update);
 			echo"<script>
-					document.location.href = 'editreview.php';
+					document.location.href = 'editreview.php?id=$idrvw';
 				</script>";
 		}
 		else if(isset($_POST['batal'])) {
-			header("Location: manajemen_review.php");
+			echo"<script>
+					document.location.href = 'manajemen_review.php';
+				</script>";
 		}
 	?>
 </body>

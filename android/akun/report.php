@@ -55,14 +55,14 @@ function myFunction() {
 		<form name="form1" method="post" action="../sistem/reportproses.php">
 		<h5>Apa penyebab anda melaporkan jasa ini?<br><br>
 		<select class="input" name="jenis_laporan">
-<option></option>
-<option>Jasa tidak sesuai keterangan di aplikasi</option>
-<option>Jasa melakukan pelayanan yang sangat buruk</option>
-<option>Jasa melakukan penipuan</option>
-<option>Penyedia Jasa melakukan tindak kriminal</option>
-<option>Jasa mengandung SARA dan kata-kata tidak pantas</option>
-<option>Lain-lain</option>
-</select><BR><br>
+			<option></option>
+			<option>Jasa tidak sesuai keterangan di aplikasi</option>
+			<option>Jasa melakukan pelayanan yang sangat buruk</option>
+			<option>Jasa melakukan penipuan</option>
+			<option>Penyedia Jasa melakukan tindak kriminal</option>
+			<option>Jasa mengandung SARA dan kata-kata tidak pantas</option>
+			<option>Lain-lain</option>
+			</select><BR><br>
 		Deskripsikan laporan anda<br><br>
 		<input type="text" name="laporan" placeholder="Deskripsi Laporan" size="40"><br><br><br>
 		<input type="submit" value="Laporkan" style="width:90px"><br><br>

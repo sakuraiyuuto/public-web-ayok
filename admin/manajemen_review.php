@@ -36,6 +36,11 @@ if(!isset($_SESSION["log"])) {
 					</a>
 				</li>
 				<li>
+					<a href="manajemen_akun_admin.php">
+						<span>Akun Admin</span>
+					</a>
+				</li>
+				<li>
 					<a href="logout.php">	
 						<span>Log Out</span>
 					</a>
@@ -84,7 +89,7 @@ if(!isset($_SESSION["log"])) {
 								<th>Id Jasa</th>
 								<th>Id Review</th>
 								<th>Id Akun</th>
-								<th>Content</th>
+								<th>Ulasan</th>
 								<th>Rating</th>
 								<th>Action</th>
 							</tr>

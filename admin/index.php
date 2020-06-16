@@ -11,7 +11,7 @@ include("koneksi.php");
 <body>
 	<div class="bingkai">
 		<div class="logoayok">
-			<img src="../gambar/logo/ayok.png" alt="logo_ayok"/>
+			<img src="gambar/logo/ayok.png" alt="logo_ayok"/>
 		</div>
 		<div class="kotaklogin">
 			<div class="judul">
@@ -40,31 +40,26 @@ include("koneksi.php");
 		</div>
 	</div>
 	
-<?php
-if(isset($_POST["login"])) {
-	$email = $_POST["email"];
-	$password = $_POST["password"];
-	
-	$result = mysqli_query($link,"SELECT * FROM admin WHERE email='$email'");
-	$row = mysqli_num_rows($result);
-	
-	if(($row) === 1) {
-		$fetch_pass = mysqli_fetch_assoc($result);
-		$cek_password = $fetch_pass["password"];
-		if($cek_password <> $password) {
-			echo"<script>alert('Password salah');</script>";
+	<?php
+		if(isset($_POST["login"])) {
+			$email = $_POST["email"];
+			$password = $_POST["password"];
+			
+			$result = mysqli_query($link,"SELECT * FROM admin WHERE email='$email'");
+			
+			if(mysqli_num_rows($result) === 1) {
+				$row = mysqli_fetch_assoc($result);
+				
+				if (password_verify($password, $row["password"])){
+					$_SESSION['log'] = true;
+					echo"<script>document.location.href = 'manajemen_akun_user.php';</script>";
+				}
+				else {
+					echo"<script>alert('Password salah');</script>";
+				}
+			}
+			$error = true;
 		}
-		
-		else {
-			$_SESSION['log'] = true;
-			echo"<script>document.location.href = 'manajemen_akun_user.php';</script>";
-		}
-	}
-	
-	else {
-		echo"<script>alert('Email dan/atau Password salah');</script>";
-	}
-}
-?>
+	?>
 </body>
 </html>

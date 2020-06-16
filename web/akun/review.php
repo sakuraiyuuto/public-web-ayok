@@ -151,7 +151,7 @@
 		echo $row4[4];echo "<br>";
 		echo "<b>Ulasan :</b>";	echo "<br>";
 		echo $row4[3]."<br>";
-		echo "<a href=\"deletereview.php\"><b>Hapus Komentar</b></a>";
+		echo "<a href=\"../sistem/deletereview.php\"><b>Hapus Komentar</b></a>";
 		echo "</div>";
 	}
 	else 

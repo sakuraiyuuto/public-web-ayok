@@ -36,6 +36,11 @@ if(!isset($_SESSION["log"])) {
 					</a>
 				</li>
 				<li>
+					<a href="manajemen_akun_admin.php">
+						<span>Akun Admin</span>
+					</a>
+				</li>
+				<li>
 					<a href="logout.php">	
 						<span>Log Out</span>
 					</a>
