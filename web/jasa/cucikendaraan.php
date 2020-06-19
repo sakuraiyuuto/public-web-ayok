@@ -60,7 +60,7 @@ while($row=mysqli_fetch_array($hasil)){
 		$perintah3="SELECT * FROM foto where id_jasa='$row[1]'";
 		$hasil3=mysqli_query($konek, $perintah3);
 			while($row3=mysqli_fetch_array($hasil3)){
-			$imageURL='../akun/foto_jasa/'.$row3[1];
+			$imageURL='../../database/akun/foto_jasa/'.$row3[1];
 }
 echo "<a href=\"../akun/tampilanjasa.php?data1=$row[2]&data2=$row[3]\">";
 		echo "<div class=\"box8\">";
