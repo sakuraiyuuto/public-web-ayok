@@ -61,8 +61,8 @@
 		}
 	</script>
 <body>
-
-	<div class="block4">
+<div class="wrap_regis">
+	<div class="block4_regis">
 		<img src="../gambar/logo/ayok.png">
 		<p>ayo <b>kerja !</b></p>
 		<h1>Daftar akun</h1>
@@ -78,18 +78,20 @@
 			<font>Konfirmasi Password</font>
 			<input type="password" name="password2" id="password2"><p>
 			<div class="row">
-				<div class="partition1">
-					<a href="login.php">Kembali</a>
-				</div>
+			
 				<div class="partition3"> 
 				</div>
 				<div class="partition2">
 					<button type="submit" name="register" style="text-align:center;padding:7px 24px;cursor:pointer;border:none;background-color:rgb(220,180,60);color:white;
 					border-radius:30px;margin-top:0px;">Daftar</button>
 				</div>
+				<div class="partition1">
+					<a href="login.php">Kembali</a>
+				</div>
 				</p>
 		</form>
 			</div>
+	</div>
 	</div>
 <?php
 	include("../footer.php");

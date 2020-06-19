@@ -11,12 +11,14 @@
 </head>
 <body>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--navigation bar-->
 	<div class="topnav" id="myTopnav">
+	<img src="../gambar/logo/ayok.png">
 		<a href="../index.php"><b>Home</b></a>
-		<a href="../sistem/logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
+		<a href="sistem/logout.php"><b>Log Out</b></a>
 		<div class="box1">
-			<form name=form1 method=post action="carijasa.php" onsubmit="return validate()">
-				<input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
+			<form name=form1 method=post action=carijasa.php onsubmit="return validate()">
+				<input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:1px solid gray;">
 				<input type=submit style="width:40px;height:30px;border-radius:10px;border:none;cursor:pointer;border:none;background-color:white;margin-left:1px;" value="Cari">
 			</form>
 		</div>
@@ -24,6 +26,7 @@
 			<i class="fa fa-bars"></i>
 		</a>
 	</div>
+
 	<script>
 	function myFunction() 
 	{
@@ -213,7 +216,7 @@
 				{
 					while($row = $query->fetch_assoc())
 					{
-						$imageURL = '../../database/akun/foto_jasa/'.$row["nama_foto"];
+						$imageURL = '../akun/foto_jasa/'.$row["nama_foto"];
 						// Get images from the database
 						?>
 						<img src="<?php echo $imageURL; ?>" alt="" />
@@ -258,5 +261,5 @@
 	</div>
 	</div>
 		<?php
-			include ("footer.php");
+			include ("../footer.php");
 		?>

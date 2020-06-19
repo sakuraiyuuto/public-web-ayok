@@ -42,11 +42,24 @@
 
 <html lang="en" dir="ltr">
 <head>
+<style>
+	@media(max-width:800px){
+		body{
+			background: url('../gambar/poster.jpg');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size : cover;
+
+		}
+	}
+</style>
 	<meta charset="utf-8">
 	<title>Ayo Kerja !</title>
 	<link rel="stylesheet" href="../sistem/style.css">
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 	<script type="text/javascript">
 		//form tidak boleh kosong
 		function validate()
@@ -76,9 +89,24 @@
 		}
 	</script>		
 <body>
+
+
 	<!--form login -->
+	<image id="vid_grad">
+	</image>
+	<div class = "block4_wrap">
+	
+
+	<video id='videobg' poster ="..gambar/poster.jpg" autoplay muted loop>
+		<source src="../gambar/pontianak.mp4" type="video/mp4" >
+	</video>
+	
+	<div id='img'>
+	<img src="../white.png">
+	</div>
+	
 	<div class="block4">
-		<img src="../gambar/logo/ayok.png">
+	
 		<p>ayo <b>kerja !</b></p>
 		<h1>Login</h1>
 		<form name="form1" action="" method="post" onsubmit="return validate()">
@@ -90,9 +118,11 @@
 			<?php endif; ?>
 			<input type="text" name="email" placeholder="Email">
 			<input type="password" name="password" placeholder="Password">
-			<input type="submit" name="login" value="Login" style="text-align:center;width:100px;cursor:pointer;border:none;background-color:rgb(220,180,60);color:white;border-radius:30px;margin-top:3%;margin-bottom:3%;">
+			<input type="submit" name="login" value="Login" style="text-align:center;width:100px;cursor:pointer;border:none;background-color:rgb(220,180,60);color:white;border-radius:30px;margin-top:10%;margin-bottom:3%;margin-left :30%;">
 		</form>
 		<p> Belum punya akun? <a href="../akun/registrasi.php" style="text-align:center"> Daftar sekarang. </a></p>
 	</div>
+	</div>
 </body>
+
 </html>
