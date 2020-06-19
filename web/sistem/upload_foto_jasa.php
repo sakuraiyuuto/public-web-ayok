@@ -5,7 +5,7 @@
 	$statusMsg = '';
 
 	// File upload path
-	$targetDir = "../../database/akun/foto_jasa/";
+	$targetDir = "../akun/foto_jasa/";
 	$fileName = basename($_FILES["file"]["name"]);
 	$targetFilePath = $targetDir . $fileName;
 	$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
