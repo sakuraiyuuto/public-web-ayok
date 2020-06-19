@@ -10,19 +10,21 @@ include("../sistem/koneksi_database.php");
  </head>
  <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="topnav" id="myTopnav">
-  <a href="../index.php"><b>Home</b></a>
-  <a href="../sistem/logout.php" style="background-color:rgb(230,60,40);"><b>Log Out</b></a>
-  <div class="box1">
-  <form name=form1 method=post action="../akun/carijasa.php" onsubmit="return validate()">
-<input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:none;">
-<input type=submit style="width:40px;height:30px;border-radius:10px;border:none;cursor:pointer;border:none;background-color:white;margin-left:1px;" value="Cari">
-</form>
-</div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+	<!--navigation bar-->
+	<div class="topnav" id="myTopnav">
+	<img src="../gambar/logo/ayok.png">
+		<a href="../index.php"><b>Home</b></a>
+		<a href="sistem/logout.php"><b>Log Out</b></a>
+		<div class="box1">
+			<form name=form1 method=post action=carijasa.php onsubmit="return validate()">
+				<input class=input type=text name=cari maxlength=100 placeholder="Cari jasa disini"style="width:80%;height:30px;border-radius:30px;padding-left:10px;border:1px solid gray;">
+				<input type=submit style="width:40px;height:30px;border-radius:10px;border:none;cursor:pointer;border:none;background-color:white;margin-left:1px;" value="Cari">
+			</form>
+		</div>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -59,7 +61,7 @@ while($row=mysqli_fetch_array($hasil)){
 		$perintah3="SELECT * FROM foto where id_jasa='$row[1]'";
 		$hasil3=mysqli_query($konek, $perintah3);
 			while($row3=mysqli_fetch_array($hasil3)){
-			$imageURL='../../database/akun/foto_jasa/'.$row3[1];
+			$imageURL='../akun/foto_jasa/'.$row3[1];
 }
 echo "<a href=\"../akun/tampilanjasa.php?data1=$row[2]&data2=$row[3]\">";
 		echo "<div class=\"box8\">";
@@ -141,4 +143,5 @@ else {
 			</div>
 			</div>
 			</div>
-			
+			<?php
+include("../footer.php");?>
